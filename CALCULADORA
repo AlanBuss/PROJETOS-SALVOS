@@ -1,0 +1,24 @@
+#DEPOIS DE QUEBRAR A CABEÇA PESQUISANDO MEIOS DE FAZER UMA CALCULADORA MAIS SIMPLIFICADA, E PESQUISANDO SOBRE FUNÇÕES E ERRANDO ALGUMAS VEZES. 
+#O RESULTADO FINAL SIMPLICADO FOI ESSE:
+
+numero1 = float(input('Valor inicial:'))
+numero2 = float(input('Valor secundário:'))
+
+
+somar=(numero1+numero2)
+soma = somar
+print ('A soma é:', str(soma))
+
+multiplicar=(numero1*numero2)
+multiplique = multiplicar
+print ('A multiplicação é:', str(multiplique))
+
+dividir=(numero1/numero2)
+divide = dividir
+print ('A divisão é:', str(divide))
+
+subtrair=(numero1)-(+numero2)
+subtrai = subtrair
+print ('A subtração é:', str(subtrai))
+
+#O RESULTADO FINAL IRÁ PRINTAR OS 4 RESULTADOS SIMULTANEAMENTE.
