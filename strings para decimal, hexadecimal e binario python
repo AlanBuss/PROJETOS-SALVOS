@@ -1,0 +1,16 @@
+letra = input('Qual a letra para conversão?')
+print(f'Letra digitada foi: {letra} ')
+
+decimal = ord(letra)
+integer = int(letra, 16)
+hexadecimal = hex(integer)
+binario = bin(integer)
+print (f'\nO valor em decimal é: {decimal}, \nO valor em hexadecimal é:{hexadecimal}, \nO valor em binário é:{binario}')
+
+
+#OUTRA RESPOSTA possivel:
+#letra(input:etc)
+#print(letra)
+#print(ord(letra))
+#print (hex(ord(letra)))
+#print (bin(ord(letra)))
