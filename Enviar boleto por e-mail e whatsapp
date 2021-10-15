@@ -30,3 +30,18 @@ botao = Button(janela,text='Enviar Boleto', command= enviaremail)
 botao.grid = (column=2, row=2)
 
 janela.mainloop()
+#########################################
+janela = Tk()
+janela = ttk.Frame(janela, padding=200) #QUANTIDADE DIVISÃO DE "PIXELS" (linha e coluna) na tela
+janela.grid(column=0, row=0)
+
+ttk.Label(janela, text="Hello World!").grid(column=0, row=0)
+
+ttk.Button(janela, text="Quit", command= janela.destroy).grid(column=1, row=0)
+
+janela.mainloop() 
+
+
+
+
+
