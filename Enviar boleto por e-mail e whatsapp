@@ -1,0 +1,32 @@
+**PRIMEIRO PRECISO CRIAR O CÓDIGO PARA ENTRAR NO SAC DO CLIENTE.
+#USUÁRIO IRÁ DEFINIR SE O CLIENTE É TCA OU VIAWEB
+#CLICAR EM ITEM SELECIONÁVEL ('TCA' ou ('VIAWEB')
+#DIGITAR EMAIL DO CLIENTE
+#DIGITAR NUMERO DO CELULAR
+
+def enviaremail():
+    msg = EmailMessage()
+    msg.set_content('Mensagem Teste')
+
+    msg['Subject'] = 'Boleto Enviado!'
+    msg['From'] = ""
+    msg['To'] = (f"{}")
+
+    # Send the message via our own SMTP server.
+    server = smtplib.SMTP_SSL('smtp.tca.com.br', 465) 
+    server.login("suporte07@tca.com.br", "!TesTCA64515")
+    server.send_message(msg)
+    server.quit()
+
+    
+
+janela = Tk()
+janela.title('Envio de Boletos')
+
+orientacao = Label(janela, text='Digite o número do cliente para enviar o boleto')
+orientacao.grid = (column=0, row=0) #QUANTIDADE DIVISÃO DE "PIXELS"(linha e coluna) na tela
+
+botao = Button(janela,text='Enviar Boleto', command= enviaremail)
+botao.grid = (column=2, row=2)
+
+janela.mainloop()
