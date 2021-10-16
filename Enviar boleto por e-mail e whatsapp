@@ -18,18 +18,6 @@ def enviaremail():
     server.send_message(msg)
     server.quit()
 
-    
-
-janela = Tk()
-janela.title('Envio de Boletos')
-
-orientacao = Label(janela, text='Digite o número do cliente para enviar o boleto')
-orientacao.grid = (column=0, row=0) #QUANTIDADE DIVISÃO DE "PIXELS"(linha e coluna) na tela
-
-botao = Button(janela,text='Enviar Boleto', command= enviaremail)
-botao.grid = (column=2, row=2)
-
-janela.mainloop()
 #########################################
 janela = Tk()
 janela = ttk.Frame(janela, padding=200) #QUANTIDADE DIVISÃO DE "PIXELS" (linha e coluna) na tela
@@ -40,6 +28,24 @@ ttk.Label(janela, text="Hello World!").grid(column=0, row=0)
 ttk.Button(janela, text="Quit", command= janela.destroy).grid(column=1, row=0)
 
 janela.mainloop() 
+
+
+#############################
+navegadorTCA= webdriver.Chrome()
+#navegadorVIAWEB = webdriver.Chrome()
+#navegadorVIAWEB.get('https://mk.viawebrs.com.br/sac/login/?sys=SAC')
+CPF= (f'03824066050')
+
+navegadorTCA.get('https://centraldoassinante.tca.com.br/sac/login/?sys=SAC')
+time.sleep(1)
+navegadorTCA.find_element_by_xpath('/html/body/div[2]/div[2]/form/input[1]')
+time.sleep(1)
+navegadorTCA.send_keys('03824066050')
+navegadorTCA.add_cookie
+navegadorTCA.find_element_by_xpath('/html/body/div[2]/div[2]/form/input[2]')
+
+
+
 
 
 
