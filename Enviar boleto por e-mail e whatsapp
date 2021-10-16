@@ -45,6 +45,9 @@ navegadorTCA.add_cookie
 navegadorTCA.find_element_by_xpath('/html/body/div[2]/div[2]/form/input[2]')
 
 
+#MUDANÇA DE PLANO:
+CRIAR DOIS EXECUTAVEIS COM CODIGOS INTERNOS MODIFICADOS PARA REALIZAR A FUNÇÃO DESEJADA.
+
 
 
 
