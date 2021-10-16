@@ -50,6 +50,34 @@ CRIAR DOIS EXECUTAVEIS COM CODIGOS INTERNOS MODIFICADOS PARA REALIZAR A FUNÇÃO
 
 
 
+#PRIMEIRO PRECISO CRIAR O CÓDIGO PARA ENTRAR NO SAC DO CLIENTE.
+#USUÁRIO IRÁ DEFINIR SE O CLIENTE É TCA OU VIAWEB
+#CLICAR EM ITEM SELECIONÁVEL ('TCA' ou ('VIAWEB')
+#DIGITAR EMAIL DO CLIENTE
+#DIGITAR NUMERO DO CELULAR
+
+import smtplib
+from email.mime.multipart import  MIMEMultipart
+from email.mime.text import MIMEText
+#START SERVIDOR SMTP
+#construir email tipo MIME
+#enviar o email no servidor SMTP
+
+def enviaremail():
+    msg = EmailMessage()
+    msg.set_content('Mensagem Teste')
+
+    msg['Subject'] = 'Boleto Enviado!'
+    msg['From'] = ""
+    msg['To'] = (f"{emaildocliente}")
+
+    # Send the message via our own SMTP server.
+    server = smtplib.SMTP_SSL('smtp.tca.com.br', 465)
+    server.login("suporte07@tca.com.br", "!TesTCA64515")
+    server.send_message(msg)
+    server.quit()
+
+
 
 
 
