@@ -14,7 +14,7 @@ def enviaremail():
 
     # Send the message via our own SMTP server.
     server = smtplib.SMTP_SSL('smtp.tca.com.br', 465) 
-    server.login("suporte07@tca.com.br", "!TesTCA64515")
+    server.login("", "SENHA")
     server.send_message(msg)
     server.quit()
 
@@ -73,7 +73,7 @@ def enviaremail():
 
     # Send the message via our own SMTP server.
     server = smtplib.SMTP_SSL('smtp.tca.com.br', 465)
-    server.login("suporte07@tca.com.br", "!TesTCA64515")
+    server.login("suporte07@tca.com.br", "SENHA")
     server.send_message(msg)
     server.quit()
 
